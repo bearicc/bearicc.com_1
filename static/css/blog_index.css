@@ -1,0 +1,48 @@
+#content.container {
+  font-size: 1.5em;
+  margin-top: 30px;
+}
+article {
+  border: 1px solid #EAEAEA;
+  background: #f8f8f8;
+  border-radius: 4px;
+  margin-bottom: 30px;
+  padding: 0 15px;
+}
+article .title {
+  font-size: 1.5em;
+}
+article .subtitle {
+  font-size: 0.8em;
+}
+article p {
+  word-wrap: break-word;
+  text-align: justify;
+  font-size: 1em;
+}
+article span.date {
+  margin-left: 1ex;
+}
+#blog {
+  padding-right: 30px;
+}
+#sidebar {
+  padding-left: 30px;
+}
+#sidebar > .panel {
+  box-shadow: -8px 0 15px -8px rgba(0,0,0,.5);
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+#latest-posts a {
+  padding: 0 5px;
+  text-decoration: none;
+}
+#category ul li,
+#archive ul li {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}

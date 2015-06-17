@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+<!-- head -->
+  {% block css %}
+  {{ block.super }}
+  <link rel="stylesheet" href="{% static 'leaflet/leaflet.css' %}">
+  <link rel="stylesheet" href="{% static 'css/about.css' %}">
+  {% endblock %}
+<!-- head -->
+<!-- body -->
+  <!-- main-container -->
+    <!-- nav -->
+      <!-- container-fluid -->
+        <!-- navbar -->
+          <!-- navbar-right -->
+            {% block navbar-right %}
+            <li><a href="/">Home</a></li>
+            <li><a href="/project">Project</a></li>
+            <li><a href="/blog">Blog</a></li>
+            <li class="active"><a href="/about">About</a></li>
+            {% endblock %}
+
+    {% block content %}
+      <div id="map"></div>
+    {% endblock %}
+
+  <!-- #footer -->
+    {% block footer %}
+      <div class="row">
+        <div class="col-md-4">&copy; 2015 BEAR</div>
+        <div class="col-md-4"></div>
+        <div class="col-md-4 visitor-tracking">
+          <span>Last visited: {{ visitor_recent }}</span>
+          <span>Total visitors: {{ visitor_total }}</span>
+        </div>
+      </div>
+    {% endblock %}
+
+  {% block script %}
+  {{ block.super }}
+  <script src="{% static 'leaflet/leaflet.js' %}"></script>
+  <script src="{% static 'js/about.js' %}"></script>
+  {% endblock %}
+<!-- body -->

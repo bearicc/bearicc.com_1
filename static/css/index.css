@@ -1,0 +1,208 @@
+.navbar-brand,
+.navbar-nav li a {
+  height: 70px;
+  line-height: 70px;
+  padding: 0 15px;
+}
+footer .visitor-tracking {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ---------- resume ---------- */
+#content .resume { font-size: 18px; max-width: 800px; margin: auto; }
+#content .resume .row { margin-bottom: 15px; }
+#content .resume ul {
+  padding: 0;
+}
+#resume-link {
+  color: blue;
+  font-size: 26px;
+  font-weight: normal;
+}
+#content .resume .title {
+  font-weight: bold;
+  font-size: 20px;
+}
+#content .resume .header {
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: row;
+  -webkit-flex-direction: row;
+  justify-content: space-between;
+  -webkit-justify-content: space-between;
+  align-items: center;
+  -webkit-align-items: center;
+}
+#content .resume ul {
+  list-style-position: inside;
+}
+#content .resume div.header:hover,
+#content .resume p:hover,
+#content .resume ul.header:hover {
+  background-color: lightblue;
+}
+#content .resume ul.content li:hover {
+  background-color: lightgreen;
+}
+#content .resume .header div:nth-child(2) {
+  font-size: 26px;
+}
+#education p.title,
+#skills p.title,
+#experience p.title {
+  border-bottom: 1px solid black;
+}
+#content .resume ul.header {
+  display: flex;
+  display: -webkit-flex;
+  list-style: none;
+  flex-direction: row;
+  -webkit-flex-direction: row;
+  justify-content: space-between;
+  -webkit-justify-content: space-between;
+  align-items: center;
+  -webkit-align-items: center;
+}
+#education ul.content {
+  list-style: none;
+  padding-left: 4ex;
+}
+#content .resume span {
+  color: blue;
+}
+/* ---------- left and right panel ---------- */
+.main-container {
+  position: relative;
+  min-height: 100%;
+  margin: 0 auto;
+  left: 0;
+  transition: left 0.7s;
+}
+#left-panel,
+#right-panel {
+  position: fixed;
+  width: 250px;
+  height: 100%;
+  top: 0;
+  background: transparent;
+  z-index: 1000;
+  font-size: 1.5em;
+}
+#left-panel {
+  left: -150px;
+  transition: left 0.7s;
+}
+#right-panel {
+  right: -150px;
+  transition: right 0.7s;
+}
+#left-panel-content,
+#right-panel-content {
+  position: absolute;
+  box-sizing: border-box;
+  width: 150px;
+  height: 100%;
+  top: 0;
+  border: 1px solid black;
+  background-color: #47a3da;
+  text-align: center;
+  padding-top: 15px;
+  color: white;
+}
+#left-panel-content { left: 0; }
+#right-panel-content { right: 0; }
+#left-panel:hover,
+#left-panel.hover {
+  left: 0;
+}
+#right-panel:hover {
+  right: 0;
+}
+#left-panel:hover ~ .main-container,
+#left-panel.hover ~ .main-container {
+  left: 150px;
+}
+/* ---------- info ---------- */
+#info {
+  margin-bottom: 15px;
+  width: 150px;
+}
+#info .me {
+  margin: 0 auto 15px;
+}
+#info h1, #info p {
+  text-align: center;
+  margin: 0;
+}
+#info h1 {
+  font-size: 1em;
+}
+.me {
+  position: relative;
+  background-image: url("../img/bear.png");
+  background-size: contain;
+  width: 100px;
+  height: 100px;
+  margin: 15px 0;
+  border-radius: 50%;
+}
+.me-bg {
+  display: none;
+}
+.me:hover .me-bg {
+  display: block;
+  background-color: rgba(172,214,255,0.5);
+  opacity: 0.5;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* ---------- back-to-top ---------- */
+.back-to-top {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 45px;
+  font-weight: bold;
+  text-align: center;
+  color: #fff;
+  display: none;
+  transition: display 1s;
+  z-index: 100;
+}
+.back-to-top i {
+  display: block;
+  margin; auto;
+  background-color: #de4a4a;
+  height: 45px;
+  line-height: 45px;
+  font-size: 1.2em;
+}
+.back-to-top p {
+  display: block;
+  background-color: #1c64a1;
+  height: 45px;
+  line-height: 45px;
+  margin: 0;
+}
+.back-to-top:hover {
+  cursor: pointer;
+}
+
+#content {
+  position: relative;
+}
+a.punch {
+  position: absolute;
+  left: 15px;
+  top: 0;
+}

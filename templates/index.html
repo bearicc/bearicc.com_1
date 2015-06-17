@@ -1,0 +1,190 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+<!-- head -->
+  {% block css %}
+  {{ block.super }}
+  <link rel="stylesheet" href="{% static 'jquery-ui/jquery-ui.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/gh-fork-ribbon.css' %}">
+  <link rel="stylesheet" href="{% static 'css/flickity.css' %}">
+  <link rel="stylesheet" href="{% static 'css/index.css' %}">
+  {% endblock %}
+<!-- head -->
+<!-- body -->
+{% block body %}
+  <div id="left-panel">
+    <div id="left-panel-content">
+      <div id="info">
+        <div class="me">
+          <div class="me-bg bg-primary"></div>
+        </div>
+        <h1>Hao Xiong</h1>
+        <p>UIUC</p>
+      </div>
+    </div>
+  </div>
+
+  <!--
+  <div id="right-panel">
+    <div id="right-panel-content">Welcome to my homepage!</div>
+  </div>
+  -->
+
+  <div class="github-fork-ribbon-wrapper right">
+    <div class="github-fork-ribbon">
+      <a href="{% static 'doc/resume.pdf' %}">Resume</a>
+    </div>
+  </div>
+
+  <div class="back-to-top">
+    <i class="fa fa-angle-up"></i>
+    <p>Up</p>
+  </div>
+{{ block.super }}
+{% endblock %}
+  <!-- main-container -->
+    <!-- nav -->
+      <!-- container-fluid -->
+        <!-- navbar -->
+          <!-- navbar-right -->
+            {% block navbar-right %}
+            <li class="active"><a href="/">Home</a></li>
+            <li><a href="/project">Project</a></li>
+            <li><a href="/blog">Blog</a></li>
+            <li><a href="/about">About</a></li>
+            {% endblock %}
+
+    {% block content %}
+      <a id="welcome" class="punch" href="#">Welcome!</a>
+      <div class="resume">
+        <p id="resume-link" class="row">Resume <a href="{% static 'doc/resume.pdf' %}"><i class="fa fa-file-pdf-o"></i></a></p>
+        <div class="row" id="education">
+          <p class="title">EDUCATION</p>
+          <ul class="header title">
+            <li>University of Illinois at Urbana-Champaign</li>
+            <li>(UIUC, Urbana, IL)</li>
+            <li>May 2015</li>
+          </ul>
+          <ul class="content">
+            <li>Certificate of Graduate Specialization in Computer Science and Engineering</li>
+            <li>M.S. in Nuclear, Plasma and Radiological Engineering (NPRE)</li>
+            <li>GPA 3.86/4, all courses A.</li>
+            <li>Selected Courses: Scientific Visualization; Numerical Methods for PDEs.</li>
+          </ul>
+          <ul class="header title">
+            <li>Institute of Plasma Physics, Chinese Academy of Sciences</li>
+            <li>(ASIPP, China) </li>
+            <li>June 2013</li>
+          </ul>
+          <ul class="content">
+            <li>M.S. in Plasma Physics</li>
+            <li>Selected Courses: Linux System and IDL Astronomy Library</li>
+          </ul>
+          <ul class="header title">
+            <li>University of Science and Technology of China</li>
+            <li>(USTC, China)</li>
+            <li>June 2010</li>
+          </ul>
+          <ul class="content">
+            <li>B.S. in Applied Physics</li>
+            <li>Selected Courses: C, FORTRAN; Data Structure and Database; Algorithm.</li>
+          </ul>
+        </div><!-- education -->
+        <div class="row" id="skills">
+          <p class="title">SKILLS</p>
+          <ul class="content">
+            <li><span>C++</span> (proficiency); <span>Python</span> (familiar); <span>Linux and shell</span> (proficiency); <span>Java</span> (experience); <span>SQL</span> (experience).</li>
+            <li>Data structure and algorithms (familiar).</li>
+            <li><span>HTML</span>, <span>CSS</span>, <span>JavaScript</span> (very familiar); <span>jQuery</span>, Bootstrap (familiar).</li>
+            <li>CSS transition; Canvas; Svg; WebGL; Plugins.</li>
+            <li><span>Django</span> (very familiar); flask (familiar).</li>
+          </ul>
+        </div><!-- skills -->
+        <div id="experience">
+          <div class="row">
+            <p class="title">EXPERIENCE</p>
+            <ul class="header title">
+              <li>3D <span>Visualization</span> of Soil Information on LIDAR Data </li>
+              <li>2015</li>
+            </ul>
+            <ul class="content">
+              <li>Mesh reconstruction and down sampling of cloud points from Iowa LIDAR project and coordinates transformation.</li>
+              <li>Shapefile processing of public soil data; data analysis and visualization of soil properties overlaying on top of elevation information.</li>
+            </ul>
+          </div><!-- row -->
+          <div class="row">
+            <ul class="header title">
+              <li>Full Stack Web Application Development</li>
+              <li>2015</li>
+            </ul>
+            <p><a href="http://www.greenmoonchicago.com/">www.greenmoonchicago.com</a></p>
+            <ul class="content">
+              <li>Collaborate with two other colleagues together using git and GitHub to build an attractive web site presenting data analysis of public data.</li>
+              <li>Use Linux and Apache (web server); Flask and flask extensions (web framework); HTML, CSS, Bootstrap, Fontawesome, JavaScript, jQuery (web front end); PostgreSQL, MongoDB (database); Leaflet, Twitter API.</li>
+            </ul>
+          </div><!-- row -->
+          <div class="row">
+            <ul class="header title">
+              <li>Graduate Research Assistant</li>
+              <li>(UIUC)</li>
+              <li>2014 - 2015</li>
+            </ul>
+            <ul class="content">
+              <li><span>Developed algorithms</span> for automated isotope identification and analyzed gamma spectra using wavelet analysis which is trained with thousands of spectra for parameter optimizations.</li>
+              <li>Statistical analysis of uncertainty of linear regression and error propagation of singular problems.</li>
+            </ul>
+          </div><!-- row -->
+          <div class="row">
+            <ul class="header title">
+              <li>Graduate Teaching Assistant</li>
+              <li>(UIUC)</li>
+              <li>2013 - 2014</li>
+            </ul>
+            <ul class="content">
+              <li>Assisted Professor with homework and exam assessment in two junior-level courses: Radiation Interaction with Matter I & II, lectured exercise classes.</li>
+            </ul>
+          </div><!-- row -->
+          <div class="row">
+            <ul class="header title">
+              <li>Graduate Research Assistant</li>
+              <li>(ASIPP)</li>
+              <li>2011 - 2013</li>
+            </ul>
+            <ul class="content">
+              <li><span>Numerical modeling</span> of complicated physical problems in EAST tokamak combined with scientific analysis of experimental data using large code package.</li>
+              <li>Led a team to design and install a new diagnostic device and implemented remote data acquisition and analysis.</li>
+            </ul>
+          </div><!-- row -->
+          <div class="row">
+            <ul class="header title">
+              <li>Lab Assistant</li>
+              <li>(UIUC)</li>
+              <li>2009</li>
+            </ul>
+            <ul class="content">
+              <li><span>Numerical Modeling</span> of the sheath structure of a hot-cathode in plasma and obtained new results which were consistent with experiments (A+ as University Research Project).</li>
+            </ul>
+          </div><!-- row -->
+        </div><!-- experience -->
+      </div>
+    {% endblock %}
+
+  <!-- #footer -->
+    {% block footer %}
+      <div class="row">
+        <div class="col-md-4">&copy; 2015 BEAR</div>
+        <div class="col-md-4"></div>
+        <div class="col-md-4 visitor-tracking">
+          <span>Last visited: {{ visitor_recent }}</span>
+          <span>Total visitors: {{ visitor_total }}</span>
+        </div>
+      </div>
+    {% endblock %}
+
+  {% block script %}
+  {{ block.super }}
+  <script src="{% static 'jquery-ui/jquery-ui.min.js' %}"></script>
+  <script src="{% static 'js/flickity.pkgd.min.js' %}"></script>
+  <script src="{% static 'js/index.js' %}"></script>
+  {% endblock %}
+<!-- body -->

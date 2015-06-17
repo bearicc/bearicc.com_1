@@ -1,0 +1,23 @@
+{extends "base.html" %}
+{% load staticfiles %}
+
+<!-- head -->
+  {% block css %}
+  {{ block.super }}
+  <link rel="stylesheet" href="{% static 'css/index.css' %}">
+  {% endblock %}
+<!-- head -->
+<!-- body -->
+  <!-- main-container -->
+    {% block content %}
+      <div class="row">
+        <div class="col-md-4">Hi</div>
+        <div class="col-md-8">Hi, too</div>
+      </div>
+    {% endblock %}
+
+  {% block js %}
+  {{ block.super }}
+  <script src="{% static 'js/index.js' %}"></script>
+  {% endblock %}
+<!-- body -->
