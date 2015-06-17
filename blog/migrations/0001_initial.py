@@ -16,14 +16,14 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Category',
             fields=[
-                ('id', models.AutoField(primary_key=True, auto_created=True, serialize=False, verbose_name='ID')),
+                ('id', models.AutoField(auto_created=True, serialize=False, primary_key=True, verbose_name='ID')),
                 ('category', models.CharField(max_length=30)),
             ],
         ),
         migrations.CreateModel(
             name='Comment',
             fields=[
-                ('id', models.AutoField(primary_key=True, auto_created=True, serialize=False, verbose_name='ID')),
+                ('id', models.AutoField(auto_created=True, serialize=False, primary_key=True, verbose_name='ID')),
                 ('author', models.CharField(max_length=30, default='visitor')),
                 ('text', models.TextField()),
                 ('date', models.DateTimeField(default=django.utils.timezone.now)),
@@ -32,11 +32,11 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Post',
             fields=[
-                ('id', models.AutoField(primary_key=True, auto_created=True, serialize=False, verbose_name='ID')),
+                ('id', models.AutoField(auto_created=True, serialize=False, primary_key=True, verbose_name='ID')),
                 ('title', models.CharField(max_length=200)),
                 ('text', models.TextField()),
                 ('created_date', models.DateTimeField(default=django.utils.timezone.now)),
-                ('published_date', models.DateTimeField(blank=True, null=True)),
+                ('published_date', models.DateTimeField(null=True, blank=True)),
                 ('author', models.ForeignKey(to=settings.AUTH_USER_MODEL)),
             ],
         ),
