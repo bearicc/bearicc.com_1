@@ -13,6 +13,5 @@ $(document).ready(function () {
 
 function set_footer_art() {
     var footer_height = $("footer").height();
-    console.log(footer_height);
     $(".main-container").css({"padding-bottom": footer_height+20});
 }

@@ -6,6 +6,9 @@ html, body {
   font-family: Cantarell, 'Droid Sans', Ubuntu, 'DejaVu Sans', Arial, sans-serif;
   background: #f4f4f4 url("/static/img/bg001.png");
 }
+video {
+display: block;
+}
 .main-container {
   position: relative;
   min-height: 100%;
@@ -122,4 +125,37 @@ a.punch:active {
 img.example_retina {
   margin: 20px;
   box-shadow: 0 8px 15px rgba(0,0,0,0.4);
+}
+
+/* ---------- back-to-top ---------- */
+.back-to-top {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 45px;
+  font-weight: bold;
+  text-align: center;
+  color: #fff;
+  display: none;
+  transition: display 1s;
+  z-index: 100;
+}
+.back-to-top i {
+  display: block;
+  margin; auto;
+  background-color: #de4a4a;
+  height: 45px;
+  line-height: 45px;
+  font-size: 1.2em;
+}
+.back-to-top p {
+  display: block;
+  background-color: #1c64a1;
+  height: 45px;
+  line-height: 45px;
+  margin: 0;
+}
+.back-to-top:hover {
+  cursor: pointer;
 }

@@ -178,37 +178,19 @@ footer .visitor-tracking {
   cursor: pointer;
 }
 
-/* ---------- back-to-top ---------- */
-.back-to-top {
+video#bgvid {
   position: fixed;
-  right: 0;
   top: 50%;
-  transform: translateY(-50%);
-  width: 45px;
-  font-weight: bold;
-  text-align: center;
-  color: #fff;
-  display: none;
-  transition: display 1s;
-  z-index: 100;
-}
-.back-to-top i {
-  display: block;
-  margin; auto;
-  background-color: #de4a4a;
-  height: 45px;
-  line-height: 45px;
-  font-size: 1.2em;
-}
-.back-to-top p {
-  display: block;
-  background-color: #1c64a1;
-  height: 45px;
-  line-height: 45px;
-  margin: 0;
-}
-.back-to-top:hover {
-  cursor: pointer;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  background: url(polina.jpg) no-repeat;
+  background-size: cover;
 }
 
 #content {
