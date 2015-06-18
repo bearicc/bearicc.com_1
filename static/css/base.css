@@ -1,4 +1,5 @@
-@import url(http://fonts.googleapis.com/css?family=Ubuntu+Condensed|Montserrat:400,700);
+@import url(http://fonts.googleapis.com/css?family=Ubuntu+Condensed|Montserrat:400,700|Kaushan+Script);
+@import url(http://fonts.googleapis.com/css?family=Kaushan+Script);
 
 html, body {
   min-height: 100%;
@@ -18,7 +19,6 @@ display: block;
   min-width: 85%;
 }
 .navbar-default {
-  font-family: 'Montserrat', sans-serif;
   background: linear-gradient(90deg, #444, black 50%);
   box-shadow: 5px 5px 10px -5px black;
   border: none;
@@ -30,9 +30,10 @@ display: block;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  color: #fff;
+  color: lightgreen;
   background: transparent;
   font-family: 'Ubuntu Condensed', sans-serif;
+  /* font-family: "Kaushan Script","Helvetica Neue",Helvetica,Arial,cursive; */
   font-size: 1.6em;
 }
 nav a.navbar-brand img {
@@ -47,12 +48,20 @@ nav a.navbar-brand img {
 .navbar-default .navbar-nav>li>a:hover {
   color: lightblue;
 }
+.navbar-default .nav li a {
+  text-transform: uppercase;
+  font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: #fff;
+}
 #content {
 }
 footer {
   width: 100%;
   color: #555753;
-  font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2em;
 }
 footer .content {
   background-color: #d3d7cf;
