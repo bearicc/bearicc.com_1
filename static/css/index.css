@@ -74,7 +74,8 @@ footer .visitor-tracking div:nth-child(1n+2) {
 }
 #education p.title,
 #skills p.title,
-#experience p.title {
+#experience p.title, 
+#publication p.title {
   border-bottom: 1px solid black;
 }
 #content .resume ul.header {
