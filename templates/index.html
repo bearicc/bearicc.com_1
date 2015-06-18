@@ -3,8 +3,6 @@
 
 <!-- head -->
   {% block css %}
-  {{ block.super }}
-  <link rel="stylesheet" href="{% static 'jquery-ui/jquery-ui.min.css' %}">
   <link rel="stylesheet" href="{% static 'css/gh-fork-ribbon.css' %}">
   <link rel="stylesheet" href="{% static 'css/flickity.css' %}">
   <link rel="stylesheet" href="{% static 'css/index.css' %}">
@@ -34,11 +32,6 @@
     <div class="github-fork-ribbon">
       <a href="{% static 'doc/resume.pdf' %}">Resume</a>
     </div>
-  </div>
-
-  <div class="back-to-top">
-    <i class="fa fa-angle-up"></i>
-    <p>Up</p>
   </div>
 
   <!--
@@ -197,8 +190,6 @@
   {% endblock %}
 
   {% block script %}
-  {{ block.super }}
-  <script src="{% static 'jquery-ui/jquery-ui.min.js' %}"></script>
   <script src="{% static 'js/flickity.pkgd.min.js' %}"></script>
   <script src="{% static 'js/index.js' %}"></script>
   {% endblock %}

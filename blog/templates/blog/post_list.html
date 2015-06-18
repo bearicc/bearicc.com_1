@@ -4,7 +4,6 @@
 
 <!-- head -->
   {% block css %}
-  {{ block.super }}
   <link rel="stylesheet" href="{% static 'css/blog_index.css' %}">
   {% endblock %}
 <!-- head -->
@@ -101,7 +100,6 @@
   {% endblock %}
 
   {% block script %}
-  {{ block.super }}
   <script src="{% static 'js/index.js' %}"></script>
   {% endblock %}
 <!-- body -->

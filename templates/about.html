@@ -3,7 +3,6 @@
 
 <!-- head -->
   {% block css %}
-  {{ block.super }}
   <link rel="stylesheet" href="{% static 'leaflet/leaflet.css' %}">
   <link rel="stylesheet" href="{% static 'css/about.css' %}">
   {% endblock %}
@@ -40,7 +39,6 @@
   {% endblock %}
 
   {% block script %}
-  {{ block.super }}
   <script src="{% static 'leaflet/leaflet.js' %}"></script>
   <script src="{% static 'js/about.js' %}"></script>
   {% endblock %}

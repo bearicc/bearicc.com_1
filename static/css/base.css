@@ -12,7 +12,7 @@ display: block;
 .main-container {
   position: relative;
   min-height: 100%;
-  padding-bottom: 67px; /* space for footer art, set by base.js */
+  /* padding-bottom: 67px; /* space for footer art, set by base.js */ */
 }
 .container {
   min-width: 85%;
@@ -50,8 +50,8 @@ nav a.navbar-brand img {
 #content {
 }
 footer {
-  position: absolute;
-  bottom: 0;
+  /* position: absolute; */
+  /* bottom: 0; */
   width: 100%;
   color: #555753;
   background: #d3d7cf transparent;
