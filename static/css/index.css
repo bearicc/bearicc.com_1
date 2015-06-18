@@ -12,7 +12,7 @@ footer .visitor-tracking {
 }
 
 /* ---------- resume ---------- */
-#content .resume { font-size: 18px; max-width: 1000px; margin: auto; }
+#content .resume { font-size: 18px; margin: auto; }
 #content .resume .row { margin-bottom: 15px; }
 #content .resume ul {
   padding: 0;
@@ -26,7 +26,7 @@ footer .visitor-tracking {
   font-weight: bold;
   font-size: 20px;
 }
-#content .resume .header {
+#content .resume ul.header {
   display: flex;
   display: -webkit-flex;
   flex-direction: row;
@@ -35,6 +35,19 @@ footer .visitor-tracking {
   -webkit-justify-content: space-between;
   align-items: center;
   -webkit-align-items: center;
+}
+#content .resume ul.header li:nth-child(1){
+  flex-grow: 1;
+}
+#content .resume ul.header li:nth-child(2){
+  flex: 0 0 auto;
+  width: 20%;
+  text-align: left;
+}
+#content .resume ul.header li:nth-child(3){
+  flex: 0 0 auto;
+  width: 20%;
+  text-align: right;
 }
 #content .resume ul {
   list-style-position: inside;
@@ -200,9 +213,4 @@ footer .visitor-tracking {
 
 #content {
   position: relative;
-}
-a.punch {
-  position: absolute;
-  left: 15px;
-  top: 0;
 }
