@@ -50,22 +50,22 @@ nav a.navbar-brand img {
 #content {
 }
 footer {
-  /* position: absolute; */
-  /* bottom: 0; */
   width: 100%;
   color: #555753;
-  background: #d3d7cf transparent;
-  padding-bottom: 20px;
   font-weight: bold;
+}
+footer .content {
+  background-color: #d3d7cf;
+  padding: 20px 0;
 }
 img#footer-art {
   width: 100%;
+  background: transparent;
 }
 #footer-grass {
   background: url("/static/img/grass.png") top center repeat-x;
   height: 39px;
   margin-top: -33px;
-  margin-bottom: 21px;
   border-bottom: 1px solid #fff;
 }
 /* ------------------------------ common ------------------------------ */
