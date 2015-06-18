@@ -55,12 +55,15 @@ function scrollToAnchor(id) {
 
 function set_footer() {
   var footer_height = $("footer").height();
+  console.log($("body").height());
+  console.log($("html").height());
   if($("body").height() < $("html").height()) {
-    console.log("OK");
+    console.log("<");
     $("html, body").css({"height": "100%"});
     $("footer").css({"position": "absolute", "bottom": "0"});
-    $(".main-container").css({"padding-bottom": footer_height+20});
+    // $(".main-container").css({"padding-bottom": footer_height+20});
   } else {
+    $("html, body").css({"height": ""});
     $("footer").css({"position": "", "bottom": ""});
   }
 }

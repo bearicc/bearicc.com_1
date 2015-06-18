@@ -23,6 +23,13 @@ footer .visitor-tracking div:nth-child(1n+2) {
   color: blue;
   font-size: 26px;
   font-weight: normal;
+  margin: 15px 0 25px;
+}
+#resume-link a {
+  text-decoration: none;
+}
+#resume-link a:hover {
+  text-decoration: none;
 }
 #content .resume .title {
   font-weight: bold;

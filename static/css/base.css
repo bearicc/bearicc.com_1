@@ -63,6 +63,13 @@ footer {
   font-family: 'Montserrat', sans-serif;
   font-size: 1.2em;
 }
+html.footer-down, body.footer-down {
+  height: 100%;
+}
+footer.footer-down {
+  position: absolute;
+  bottom: 0;
+}
 footer .content {
   background-color: #d3d7cf;
   padding: 20px 0;
