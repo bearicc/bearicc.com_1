@@ -13,7 +13,7 @@ footer .visitor-tracking {
 
 /* ---------- resume ---------- */
 #content .resume { font-size: 18px; margin: auto; }
-#content .resume .row { margin-bottom: 15px; }
+#content .resume .my-row { margin-bottom: 15px; }
 #content .resume ul {
   padding: 0;
 }
@@ -36,15 +36,15 @@ footer .visitor-tracking {
   align-items: center;
   -webkit-align-items: center;
 }
-#content .resume ul.header li:nth-child(1){
+#education ul.header li:nth-child(1){
   flex-grow: 1;
 }
-#content .resume ul.header li:nth-child(2){
+#education ul.header li:nth-child(2){
   flex: 0 0 auto;
   width: 20%;
   text-align: left;
 }
-#content .resume ul.header li:nth-child(3){
+#education ul.header li:nth-child(3){
   flex: 0 0 auto;
   width: 20%;
   text-align: right;

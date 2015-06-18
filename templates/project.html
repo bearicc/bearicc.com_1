@@ -23,15 +23,19 @@
       <h1 class="alert alert-warning" role="alert">This page is in progress!</h1>
     {% endblock %}
 
-  <!-- #footer -->
-    {% block footer %}
+  <!-- footer -->
+  {% block footer %}
+    <div class="container"><img id="footer-art" src="{% static 'img/community.png' %}" alt=""></div>
+    <div id="footer-grass" class="col-md-12"></div>
+    <div class="container">
       <div class="row">
         <div class="col-md-4">&copy; 2015 BEAR</div>
         <div class="col-md-4"></div>
-        <div class="col-md-4">
+        <div class="col-md-4 visitor-tracking">
         </div>
       </div>
-    {% endblock %}
+    </div>
+  {% endblock %}
 
   {% block script %}
   {{ block.super }}

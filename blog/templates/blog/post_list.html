@@ -86,7 +86,21 @@
       </div><!-- row -->
     {% endblock %}
 
-  {% block js %}
+  <!-- footer -->
+  {% block footer %}
+    <div class="container"><img id="footer-art" src="{% static 'img/support.png' %}" alt=""></div>
+    <div id="footer-grass" class="col-md-12"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">&copy; 2015 BEAR</div>
+        <div class="col-md-4"></div>
+        <div class="col-md-4 visitor-tracking">
+        </div>
+      </div>
+    </div>
+  {% endblock %}
+
+  {% block script %}
   {{ block.super }}
   <script src="{% static 'js/index.js' %}"></script>
   {% endblock %}
