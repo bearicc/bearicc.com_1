@@ -58,6 +58,8 @@ footer .content {
   background-color: #d3d7cf;
   padding: 20px 0;
 }
+footer .content div {
+}
 img#footer-art {
   width: 100%;
   background: transparent;

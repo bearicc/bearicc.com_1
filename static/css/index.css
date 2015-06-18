@@ -10,7 +10,9 @@ footer .visitor-tracking {
   justify-content: space-between;
   align-items: center;
 }
-
+footer .visitor-tracking div:nth-child(1n+2) {
+  text-align: right;
+}
 /* ---------- resume ---------- */
 #content .resume { font-size: 18px; margin: auto; }
 #content .resume .my-row { margin-bottom: 15px; }

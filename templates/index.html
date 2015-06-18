@@ -179,8 +179,10 @@
     <div id="footer-grass" class="col-md-12"></div>
     <div class="content">
       <div class="container">
-          <div class="row">
-            <div class="col-md-12">&copy; 2015 BEAR</div>
+          <div class="row visitor-tracking">
+            <div class="col-md-4">&copy; 2015 BEAR</div>
+            <div class="col-md-4">Last visited: {{ visitor_recent }}</div>
+            <div class="col-md-4">Total visitors: {{ visitor_total }}</div>
           </div>
       </div>
     </div>
