@@ -46,6 +46,15 @@ nav a.navbar-brand img {
 }
 #content {
 }
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  color: #555753;
+  background: #d3d7cf transparent;
+  padding-bottom: 20px;
+  font-weight: bold;
+}
 img#footer-art {
   width: 100%;
 }
@@ -56,16 +65,6 @@ img#footer-art {
   margin-bottom: 21px;
   border-bottom: 1px solid #fff;
 }
-footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  color: #555753;
-  background: #d3d7cf;
-  padding-bottom: 20px;
-  font-weight: bold;
-}
-
 /* ------------------------------ common ------------------------------ */
 .ts-inset {
   background: #474747;
