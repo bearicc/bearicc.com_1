@@ -3,13 +3,13 @@
 html, body {
   min-height: 100%;
   overflow-x: hidden;
-  font-family: Helvetica Neue, Helvetica, Arial;
+  font-family: Cantarell, 'Droid Sans', Ubuntu, 'DejaVu Sans', Arial, sans-serif;
   background: #f4f4f4 url("/static/img/bg001.png");
 }
 .main-container {
   position: relative;
   min-height: 100%;
-  padding-bottom: 40px; /* footer */
+  padding-bottom: 67px; /* space for footer art, set by base.js */
 }
 .container {
   min-width: 85%;
@@ -46,16 +46,23 @@ nav a.navbar-brand img {
 }
 #content {
 }
-#footer {
+img#footer-art {
+  width: 100%;
+}
+#footer-grass {
+  background: url("/static/img/grass.png") top center repeat-x;
+  height: 39px;
+  margin-top: -33px;
+  margin-bottom: 21px;
+  border-bottom: 1px solid #fff;
+}
+footer {
   position: absolute;
   bottom: 0;
   width: 100%;
-}
-footer {
-  color: #666666;
-  background-color: #ddd;
-  border-top: 1px solid black;
-  padding: 5px 0;
+  color: #555753;
+  background: #d3d7cf;
+  padding-bottom: 20px;
   font-weight: bold;
 }
 

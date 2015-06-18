@@ -63,18 +63,20 @@
     <div id="content" class="container">
     {% block content %}
     {% endblock %}
+      <img id="footer-art" src="{% static 'img/default.png' %}" alt="">
     </div><!-- content -->
 
     <!-- ------------------------------ footer ------------------------------ -->
-    <div id="footer" class="container">
-      <footer>
-      {% block footer %}
-        <div class="row">
-          <div class="col-md-12">&copy; 2015 BEAR</div>
-        </div>
-      {% endblock %}
-      </footer>
-    </div><!-- footer -->
+    <footer>
+      <div id="footer-grass" class="col-md-12"></div>
+      <div class="container">
+        {% block footer %}
+          <div class="row">
+            <div class="col-md-12">&copy; 2015 BEAR</div>
+          </div>
+        {% endblock %}
+      </div>
+    </footer><!-- footer -->
 
   {% endblock %}
   </div><!-- main-container -->
