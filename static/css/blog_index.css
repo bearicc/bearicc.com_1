@@ -2,6 +2,9 @@
   font-size: 1.5em;
   margin-top: 30px;
 }
+.header {
+  margin: 15px auto;
+}
 article {
   border: 1px solid #DBE0E4;
   background: #F4F9FD;
@@ -9,11 +12,20 @@ article {
   margin-bottom: 30px;
   padding: 0 15px;
 }
-article .title {
+article h2.title {
   font-size: 1.5em;
+  margin: 15px auto 10px;
 }
 article .subtitle {
   font-size: 0.8em;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+article p {
+  margin: 15px auto;
+}
+article hr {
+  margin: 0;
 }
 article .subtitle .group1 a {
   color: #3c763d;

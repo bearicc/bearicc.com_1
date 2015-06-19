@@ -34,7 +34,7 @@ def article(request, year, month, day, title):
     c2 = []
     for c1 in c:
         c2.append((c1, Category.objects.filter(category=c1).count()))
-    return render(request, 'blog/post_list.html',
+    return render(request, 'blog/article.html',
                   {'posts': posts[0:10],
                    'posts_count': len(posts),
                    'posts_filter': posts_filter,
