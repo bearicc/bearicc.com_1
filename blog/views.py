@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.utils import timezone
 from .models import Post, Category
+from bs4 import BeautifulSoup
 
 
 def home(request):
@@ -43,14 +44,17 @@ def article(request, year, month, day, title):
 
 
 def category(request, category):
+    # filter results
     post_qs = Post.objects.filter(published_date__lte=timezone.now()).order_by(
                                 '-published_date')
+    # list of tuple (post, category)
     posts = []
     c = []
     for post in post_qs:
         category_qs = Category.objects.filter(post_id=post.id)
         category_of_post = [q.category for q in category_qs]
         c += category_of_post
+        post.text = BeautifulSoup(post.text).get_text()[0:300]
         posts.append((post, category_of_post))
 
     if(len(category)):

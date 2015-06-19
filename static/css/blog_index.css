@@ -15,6 +15,15 @@ article .title {
 article .subtitle {
   font-size: 0.8em;
 }
+article .subtitle .group1 a {
+  color: #3c763d;
+  border-right: 2px solid #333;
+  padding: 0 1ex;
+}
+article .subtitle .group1 a:last-child {
+  border: 0;
+  padding-right: 0;
+}
 article p {
   word-wrap: break-word;
   text-align: justify;
@@ -45,4 +54,8 @@ article span.date {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+}
+span.label {
+  padding: 5px;
+  vertical-align: middle;
 }

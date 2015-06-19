@@ -32,7 +32,7 @@
             <h2 class="title"><a href="/blog/{{post.published_date.year}}/{{post.published_date.month}}/{{post.published_date.day}}/{{post.title|urlencode}}">{{ post.title }}</a></h2>
             <div class="row subtitle">
               <div class="group1 col-md-4">
-                <i class="fa fa-tags"></i>{% for c in category %} <a href="/blog/category/{{c}}">{{c}}</a>{% endfor %}
+                <i class="fa fa-tags"></i>{% for c in category %}<a href="/blog/category/{{c}}">{{c}}</a>{% endfor %}
               </div>
               <div class="group2 col-md-8 text-right">
                 <i class="fa fa-comment"></i> <a href="#">Comments</a>               
@@ -41,6 +41,7 @@
             </div>
             <hr>
             <p class="lead">{{ post.text|safe|linebreaks }}</p>
+            <a href="/blog/{{post.published_date.year}}/{{post.published_date.month}}/{{post.published_date.day}}/{{post.title|urlencode}}"><i class="fa fa-book"></i> read the full article ...</a>
           </article>
           {% endfor %}
       <!-- ============================== siderbar ============================== --> 
