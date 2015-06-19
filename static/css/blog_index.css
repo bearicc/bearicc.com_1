@@ -71,3 +71,71 @@ span.label {
   padding: 5px;
   vertical-align: middle;
 }
+
+/* comments */
+#comment {
+  padding-top: 2em;
+  border-top: 1px solid #000;
+  margin: 30px 15px;
+}
+#comment .header {
+  height: 40px;
+  border-bottom: 2px solid #eee;
+  margin: 0;
+  padding: 0;
+  font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  color: rgba(0,39,59,.5);
+}
+#comment .header1 {
+  font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  color: rgba(0,39,59,.5);
+  margin: 0;
+  padding: 5px 0;
+  font-size: 0.8em;
+}
+#comment .header span, #comment .header a, #comment .header1 a {
+  text-decoration: none;
+  color: rgba(0,39,59,.5);
+  transition: color 1s;
+}
+#comment .header .col-md-2,
+#comment .header .col-md-10,
+#comment .header1 .col-md-2,
+#comment .header1 .col-md-10 {
+  padding: 0;
+}
+#comment .header .col-md-10 span,
+#comment .header .col-md-10 a,
+#comment .header1 .col-md-10 a {
+  display: inline-block;
+  margin-right: 25px;
+  font-weight: 700;
+  height: 40px;
+  position: relative;
+  bottom: 1px;
+}
+#comment .header span.active,
+#comment .header1 span.active {
+  color: #000;
+  border-bottom: 2px solid rgb(0, 0, 238);
+}
+#comment .header a:hover,
+#comment .header1 a:hover {
+  color: #000;
+}
+#comment img.title {
+  width: 60px;
+  height: 60px;
+}
+#comment ul.comment-item {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-justify: space-between;
+  align-items: flex-start;
+  padding: 0;
+}
+#comment ul.comment-item li:nth-child(2){
+  flex-grow: 1;
+  padding-left: 15px;
+}

@@ -43,8 +43,34 @@
             <p class="lead">{{ post.text|safe|linebreaks }}</p>
           </article>
           {% endfor %}
-      <!-- ============================== siderbar ============================== --> 
+          
+      <!-- ============================== comments ============================== --> 
+          <div id="comment">
+            <div class="header row">
+              <div class="col-md-10">
+                <span class="active">1 Comments</span>
+                <a href="http://www.bearicc.com/">bearicc.com</a>
+              </div>
+              <div class="col-md-2 text-right">Login</div>
+            </div>
+            <div class="header1 row">
+              <div class="col-md-10">
+                <a class="active" href="#"><i class="fa fa-heart"></i>&nbsp;Recommend&nbsp;&nbsp;<span class="badge">3</span></a>
+                <a href="#"><i class="fa fa-share-square-o"></i>&nbsp;Share</a>
+              </div>
+              <div class="col-md-2 text-right"><a href="#">Sort by Best</a></div>
+            </div>
+            <ul class="comment-item">
+              <li><img class="title" src="{% static 'img/flower.png' %}" alt=""/></li>
+              <li>
+                <form action="">OK</form>
+              </li>
+            </ul>
+          </div><!-- comment -->
+
         </div>
+
+      <!-- ============================== siderbar ============================== --> 
         <div class="col-md-3" id="sidebar">
           <div class="panel panel-default" id="latest-posts"> 
             <div class="panel-heading"> 
@@ -78,9 +104,6 @@
             </ul>
           </div>
         </div>
-
-        <form action="#">
-        </form>
       <!-- ============================== siderbar ============================== --> 
       </div><!-- row -->
     {% endblock %}
