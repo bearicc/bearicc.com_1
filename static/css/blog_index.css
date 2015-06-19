@@ -134,14 +134,18 @@ span.label {
   list-style: none;
   display: flex;
   flex-direction: row;
-  flex-justify: space-between;
+  justify-content: space-between;
   align-items: flex-start;
   padding: 0;
   margin-bottom: 25px;
 }
+#comment ul.comment-item li:nth-child(1){
+  min-width: 60px;
+}
 #comment ul.comment-item li:nth-child(2){
   flex-grow: 1;
   padding-left: 15px;
+  text-align: justify;
 }
 #comment ul.comment-item p.header {
   color: #777;
