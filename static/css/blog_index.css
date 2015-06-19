@@ -36,6 +36,9 @@ article .subtitle .group1 a:last-child {
   border: 0;
   padding-right: 0;
 }
+article .subtitle .group2 span.comments-count {
+  color: red;
+}
 article p {
   word-wrap: break-word;
   text-align: justify;
@@ -140,12 +143,12 @@ span.label {
   flex-grow: 1;
   padding-left: 15px;
 }
-#comment ul.comment-item.img p.header {
+#comment ul.comment-item p.header {
   color: #777;
   font-size: 0.8em;
   margin: 0;
 }
-#comment ul.comment-item.img p.header span.name {
+#comment ul.comment-item.active p.header span.name {
   color: rgb(0,0,238);
 }
 #comment-new textarea {
@@ -171,13 +174,24 @@ span.label {
   justify-content: space-between;
   align-items: center;
   list-style: none;
+  margin: 15px 0;
   padding: 0;
   width: 100%;
 }
 #comment-new .footer .form-inline .form-control {
-  height: 43px;
+  font-size: 20px;
+  padding: 5px;
+  height: 40px;
 }
-#comment-new .footer button {
-  padding-left: 30px;
-  padding-right: 30px;
+#comment-new .footer input.btn.btn-success {
+  padding: 10px 20px;
+  line-height: 20px;
+  font-size: 20px;
+}
+.alert span {
+  font-size: 1.5em;
+}
+.alert h1 {
+  font-size: 1.5em;
+  margin: 0;
 }

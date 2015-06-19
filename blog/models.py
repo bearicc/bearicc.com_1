@@ -26,7 +26,8 @@ class Category(models.Model):
 
 
 class Comment(models.Model):
-    author = models.CharField(max_length=30, default='visitor')
+    post = models.ForeignKey(Post, null=True)
+    name = models.CharField(max_length=30, default='Guest')
     text = models.TextField()
     date = models.DateTimeField(default=timezone.now)
 

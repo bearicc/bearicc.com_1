@@ -23,11 +23,8 @@
     {% block content %}
       <div class="row">
         <div class="col-md-9" id="blog">
-          <div class="row header">
-            <div class="col-md-12">Total Articles: {{ posts_filter_count }}</div>
-          </div>
       <!-- ============================== blog ============================== --> 
-          {% for post, category in posts_filter %}
+          {% for post, category, comments_count in posts_filter %}
           <article>
             <h2 class="title"><a href="/blog/{{post.published_date.year}}/{{post.published_date.month}}/{{post.published_date.day}}/{{post.title|urlencode}}">{{ post.title }}</a></h2>
             <div class="row subtitle">
@@ -35,20 +32,18 @@
                 <i class="fa fa-tags"></i>{% for c in category %}<a href="/blog/category/{{c}}">{{c}}</a>{% endfor %}
               </div>
               <div class="group2 col-md-8 text-right">
-                <i class="fa fa-comment"></i> <a href="#">Comments</a>               
+                <i class="fa fa-comment"></i>&nbsp;<a href="#comment">Comments&nbsp;({{ comments_count }})</a>
                 <i class="fa fa-clock-o"></i><span class="date">{{ post.published_date }}</span> by <a href="/about/{{post.author}}">{{ post.author }}</a>
               </div>
             </div>
             <hr>
             <p class="lead">{{ post.text|safe|linebreaks }}</p>
           </article>
-          {% endfor %}
-          
       <!-- ============================== comments ============================== --> 
           <div id="comment">
             <div class="comment-header row">
               <div class="col-md-10">
-                <span class="active">{{posts_count_all}} Comments</span>
+                <span class="active">{{ comments_count }} Comments</span>
                 <a href="http://www.bearicc.com/">bearicc.com</a>
               </div>
               <div class="col-md-2 text-right">Login</div>
@@ -64,29 +59,41 @@
             -->
 
             <ul id="comment-new" class="comment-item">
-              <li><img class="title" src="{% static 'img/user.png' %}" alt=""/></li>
+              <li><img class="title" src="{% static 'img/guest.png' %}" alt=""/></li>
               <li>
-                <form class="form-group" action="article_submit" method="get" accept-charset="utf-8">
-                  <textarea id="" class="form-control" name="" rows="3" placeholder="Say something ..."></textarea>
+                <form id="form-submit" class="form-group" method="post" accept-charset="utf-8">
+                  {% csrf_token %}
+                  <textarea id="" class="form-control" name="text" value="" rows="3" placeholder="Say something ..." required></textarea>
                   <label id="upload-img" class="form-control"><i class="fa fa-picture-o fa-2x"></i></label>
+                  <div class="footer">
+                    <div class="form-inline"><input class="form-inline form-control" type="text" name="name" value="Guest" placeholder="Guest"></div>
+                    <input class="btn btn-success" type="submit" value="Submit"></input>
+                  </div>
                 </form>
-                <div class="footer">
-                  <div class="form-inline"><input class="form-control" type="text" placeholder="Name"></div>
-                  <button class="btn btn-success"><i class="fa fa-long-arrow-right fa-2x"></i></button>
-                </div>
               </li>
             </ul>
-            {% for post, category in posts %}
-            <ul class="comment-item img">
+            {% for comment in comments %}
+            {% if comment.name == 'Guest' %}
+            <ul class="comment-item">
+              <li><img class="title" src="{% static 'img/guest.png' %}" alt=""/></li>
+            {% else %}
+            <ul class="comment-item active">
               <li><img class="title" src="{% static 'img/flower.png' %}" alt=""/></li>
+            {% endif %}
               <li>
-                <p class="header"><span class="name">bear</span> • <span class="date">3 days ago</span></p>
-                <p class="content">OK</p>
+                <p class="header"><span class="name">{{ comment.name }}</span> • <span class="date">{{ comment.date }}</span></p>
+                <p class="text">{{ comment.text | linebreaks }}</p>
               </li>
             </ul>
             {% endfor %}
           </div><!-- comment -->
-
+          {% empty %}
+          <div class="alert alert-warning alert-dismissible" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h1>Article not found !</h1>
+          </div>
+          {% endfor %}
+          
         </div>
 
       <!-- ============================== siderbar ============================== --> 

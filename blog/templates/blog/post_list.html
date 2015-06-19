@@ -27,7 +27,7 @@
             <div class="col-md-12">Total Articles: {{ posts_filter_count }}</div>
           </div>
       <!-- ============================== blog ============================== --> 
-          {% for post, category in posts_filter %}
+          {% for post, category, comments_count in posts_filter %}
           <article>
             <h2 class="title"><a href="/blog/{{post.published_date.year}}/{{post.published_date.month}}/{{post.published_date.day}}/{{post.title|urlencode}}">{{ post.title }}</a></h2>
             <div class="row subtitle">
@@ -35,7 +35,7 @@
                 <i class="fa fa-tags"></i>{% for c in category %}<a href="/blog/category/{{c}}">{{c}}</a>{% endfor %}
               </div>
               <div class="group2 col-md-8 text-right">
-                <i class="fa fa-comment"></i> <a href="/blog/{{post.published_date.year}}/{{post.published_date.month}}/{{post.published_date.day}}/{{post.title|urlencode}}#comment">Comments</a>               
+                <i class="fa fa-comment"></i>&nbsp;<a href="/blog/{{post.published_date.year}}/{{post.published_date.month}}/{{post.published_date.day}}/{{post.title|urlencode}}#comment">Comments&nbsp;({{ comments_count }})</a>
                 <i class="fa fa-clock-o"></i><span class="date">{{ post.published_date }}</span> by <a href="/about/{{post.author}}">{{ post.author }}</a>
               </div>
             </div>
