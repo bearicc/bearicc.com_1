@@ -46,26 +46,45 @@
           
       <!-- ============================== comments ============================== --> 
           <div id="comment">
-            <div class="header row">
+            <div class="comment-header row">
               <div class="col-md-10">
-                <span class="active">1 Comments</span>
+                <span class="active">{{posts_count_all}} Comments</span>
                 <a href="http://www.bearicc.com/">bearicc.com</a>
               </div>
               <div class="col-md-2 text-right">Login</div>
             </div>
-            <div class="header1 row">
+            <!--
+            <div class="comment-header1 row">
               <div class="col-md-10">
                 <a class="active" href="#"><i class="fa fa-heart"></i>&nbsp;Recommend&nbsp;&nbsp;<span class="badge">3</span></a>
                 <a href="#"><i class="fa fa-share-square-o"></i>&nbsp;Share</a>
               </div>
               <div class="col-md-2 text-right"><a href="#">Sort by Best</a></div>
             </div>
-            <ul class="comment-item">
-              <li><img class="title" src="{% static 'img/flower.png' %}" alt=""/></li>
+            -->
+
+            <ul id="comment-new" class="comment-item">
+              <li><img class="title" src="{% static 'img/user.png' %}" alt=""/></li>
               <li>
-                <form action="">OK</form>
+                <form class="form-group" action="article_submit" method="get" accept-charset="utf-8">
+                  <textarea id="" class="form-control" name="" rows="3" placeholder="Say something ..."></textarea>
+                  <label id="upload-img" class="form-control"><i class="fa fa-picture-o fa-2x"></i></label>
+                </form>
+                <div class="footer">
+                  <div class="form-inline"><input class="form-control" type="text" placeholder="Name"></div>
+                  <button class="btn btn-success"><i class="fa fa-long-arrow-right fa-2x"></i></button>
+                </div>
               </li>
             </ul>
+            {% for post, category in posts %}
+            <ul class="comment-item img">
+              <li><img class="title" src="{% static 'img/flower.png' %}" alt=""/></li>
+              <li>
+                <p class="header"><span class="name">bear</span> • <span class="date">3 years ago</span></p>
+                <p class="content">OK</p>
+              </li>
+            </ul>
+            {% endfor %}
           </div><!-- comment -->
 
         </div>
