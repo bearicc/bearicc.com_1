@@ -1,3 +1,7 @@
+.container {
+  box-sizing: border-box;
+  width: 100%;
+}
 .alert span {
   font-size: 2em;
 }
@@ -9,6 +13,7 @@
   position: relative;
 }
 .aside ul {
+  list-style: none;
   padding: 0;
   font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
 }
@@ -18,6 +23,10 @@
   color: black;
   font-size: 1.2em;
   margin: 1em 1em 1em 0;
+}
+.aside ul li:hover {
+  cursor: pointer;
+  color: blue;
 }
 .aside ul li.active {
   background: #ddd;
@@ -61,11 +70,16 @@
   width: 60%;
 }
 @media only screen and (min-width: 992px) {
+  .container {
+    padding: 0 60px;
+  }
   .aside {
     box-sizing: border-box;
     width: 25%;
   }
-    box-sizing: border-box;
+  .aside ul {
+    list-style: disc;
+  }
   .main {
     width: 75%;
   }
