@@ -5,6 +5,9 @@
   font-size: 2em;
   margin: 0;
 }
+#content .row {
+  position: relative;
+}
 .aside ul {
   padding: 0;
   font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -56,4 +59,14 @@
 }
 .main .myrow img {
   width: 60%;
+}
+@media only screen and (min-width: 992px) {
+  .aside {
+    box-sizing: border-box;
+    width: 25%;
+  }
+    box-sizing: border-box;
+  .main {
+    width: 75%;
+  }
 }

@@ -1,4 +1,9 @@
 var bScroll = true;
+var aside_offset_top = $(".aside").offset().top;
+var $html = $("html");
+var $aside = $(".aside");
+var aside_width = $aside.css("width");
+var $main= $(".main");
 
 $(document).ready(function () {
   // dynamic settings
@@ -7,6 +12,19 @@ $(document).ready(function () {
   // event
   $(window).resize(function () {
     set_footer();
+
+    aside_width = $aside.css("width");
+
+    if ($html.width() < 992) {
+      $main.css({"position": "",
+                 "width": "",
+                 "left": "",
+                 "top": ""});
+      $aside.css({"position": "",
+                  "width": "",
+                  "left": "",
+                  "top": ""});
+    }
   });
 
   $(".back-to-top").click(function () {
@@ -38,11 +56,34 @@ function scrollHandleNow() {
 }
 
 function scrollHandle() {
-  height = $(window).scrollTop();
+  var height = $(window).scrollTop();
   if (height > 0) {
     $(".back-to-top").show("drop", 500);
   } else {
     $(".back-to-top").hide("drop", 500);
+  }
+  if ($html.width() >= 992) {
+    if (aside_offset_top <= height) {
+      $main.css({"position": "relative",
+                 "left": $(".main").offset().left-$(".main").parent().offset().left,
+                 "top": $(".main").offset().top-$(".main").parent().offset().top});
+      $aside.css({"position": "fixed",
+                  "width": aside_width,
+                  "left": $(".aside").offset().left-$(window).scrollLeft(),
+                  "top": 0});
+    }
+    else {
+      $main.css({"position": "relative",
+                 "width": "75%",
+                 "left": "0",
+                 "top": "0"});
+      $aside.css({"position": "relative",
+                 "width": "25%",
+                  "left": "0",
+                  "top": "0"});
+    }
+  } else {
+
   }
 }
 
