@@ -50,10 +50,10 @@ article span.date {
 #blog {
   padding-right: 30px;
 }
-#sidebar {
+#aside {
   padding-left: 30px;
 }
-#sidebar > .panel {
+#aside > .panel {
   box-shadow: -8px 0 15px -8px rgba(0,0,0,.5);
   border: 1px solid #ddd;
   border-radius: 5px;

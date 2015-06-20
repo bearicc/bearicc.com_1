@@ -24,6 +24,51 @@
         <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <h1>This page is in progress !</h1>
       </div>
+      <div class="row">
+        <div class="col-md-3 aside">
+          <ul>
+            <li>3D Visualization of Soil Properties</li>
+            <li>Full Stack Web Application Development</li>
+            <li class="active">Spectrum Analysis</li>
+            <li>Numerical Modeling about Tokamak</li>
+            <li>A Novel Diagnostic Device</li>
+            <li>Numerical Modeling of RF Probe</li>
+            <li>...... </li>
+          </ul>
+        </div>
+        <div class="col-md-9 main">
+          <h2>AUTOMATED WAVELET ANALYSIS OF LOW RESOLUTION GAMMA-RAY SPECTRA AND PEAK AREA UNCERTAINTY</h2>
+          <p class="abstract">The accuracy of automated isotope identification from low resolution gamma-ray spectra can be significantly improved with better algorithms. The method based on the <span>wavelet transform</span> and <span>non-negative least squares</span> (NNLS) is introduced here.</p>
+          <div class="row">
+            <div class="col-md-6">
+              <img src="{% static 'img/project_spectrum_analysis_ft.png' %}">
+              <p>Two different spectra (top) with the same Fourier transform (bottom).</p>
+            </div>
+            <div class="col-md-6">
+              <img src="{% static 'img/project_spectrum_analysis_stft.png' %}">
+              <p>Example of STFT with different window length.</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <img src="{% static 'img/project_spectrum_analysis_noise_level.png' %}">
+              <p>Noise level determined from coefficient at the smallest scale.</p>
+            </div>
+            <div class="col-md-6">
+              <img src="{% static 'img/project_spectrum_analysis_simulation.png' %}">
+              <p>Simple simulated tests of the wavelet algorithm. The blue line represents the peak and the red bar represents the calculated peak area from the NNLS fitting.</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6"><img src="{% static 'img/project_spectrum_analysis_pi_unc_vs_snr.png' %}"></div>
+            <div class="col-md-6 text-justify"><p>Comparison of calculated area uncertainty between NNLS (blue) and software OriginLab (red). The blue curve was calculated by the wavelet algorithm and red curve by OriginLab. Both gave similar results and it could be seen that the larger the signal to noise ratio (SNR), the smaller the area uncertainty</p></div>
+          </div>
+          <div class="row">
+            <div class="col-md-6"><img src="{% static 'img/project_spectrum_analysis_Cs137.png' %}"></div>
+            <div class="col-md-6 text-justify"><p>In the left figure, four local maxima were found in the scalogram of Cs-137, corresponding to the four peaks: (1) backscatter peak; (2) photopeak of Cs-137 at 662 keV; (3) background peak of K-40 at 1460 keV and (4) background 36peak of Tl-208 at 2614 keV.</p></div>
+          </div>
+        </div>
+      </div>
     {% endblock %}
 
   <!-- footer -->
