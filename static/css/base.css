@@ -24,6 +24,7 @@ display: block;
   border: none;
   border-bottom: 1px solid #666;
   border-radius: 0;
+  margin-bottom: 30px;
 }
 .navbar-default a.navbar-brand {
   display: flex;
