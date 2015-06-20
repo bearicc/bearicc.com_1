@@ -35,7 +35,7 @@
                 <i class="fa fa-tags"></i>{% for c in category %}<a href="/blog/category/{{c}}">{{c}}</a>{% endfor %}
               </div>
               <div class="group2 col-md-8 text-right">
-                <i class="fa fa-comment"></i>&nbsp;<a href="/blog/{{post.published_date.year}}/{{post.published_date.month}}/{{post.published_date.day}}/{{post.title|urlencode}}#comment">Comments&nbsp;({{ comments_count }})</a>
+                <i class="fa fa-comment"></i>&nbsp;<a href="/blog/{{post.published_date.year}}/{{post.published_date.month}}/{{post.published_date.day}}/{{post.title|urlencode}}#comment">{% if comments_count > 1 %}Comments{% else %}Comment{% endif %}&nbsp;({{ comments_count }})</a>
                 <i class="fa fa-clock-o"></i><span class="date">{{ post.published_date }}</span> by <a href="/about/{{post.author}}">{{ post.author }}</a>
               </div>
             </div>
