@@ -11,17 +11,17 @@ import os
 
 def home(request):
     visitor_recent = "Not avaliable"
-    ip = get_real_ip(request)
-    if ip is not None:
-        visitor = visitor_tracking.objects.filter(ip=ip)
-        if not visitor:
-            visitor = visitor_tracking.objects.create(ip=ip, recent=timezone.now())
-            visitor_recent = visitor.recent
-            visitor.save()
-        else:
-            visitor_recent = visitor[0].recent
-            visitor[0].update()
-
+    # ip = get_real_ip(request)
+    # if ip is not None:
+    #     visitor = visitor_tracking.objects.filter(ip=ip)
+    #     if not visitor:
+    #         visitor = visitor_tracking.objects.create(ip=ip, recent=timezone.now())
+    #         visitor_recent = visitor.recent
+    #         visitor.save()
+    #     else:
+    #         visitor_recent = visitor[0].recent
+    #         visitor[0].update()
+    #
     return render(request, 'index.html',
                   {'visitor_total': visitor_tracking.objects.count(),
                    'visitor_recent': visitor_recent})
@@ -54,7 +54,7 @@ def upload(request):
 
 
 def handle_uploaded_file(title, f):
-    with open(os.path.join(settings.BASE_DIR, "static/upload/")+title, 'wb+') as destination:
+    with open(os.path.join(settings.BASE_DIR, "staticfiles/upload/")+title, 'wb+') as destination:
         for chunk in f.chunks():
             destination.write(chunk)
 
